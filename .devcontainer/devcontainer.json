@@ -13,9 +13,14 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"mongodb.mongodb-vscode"
+				"mongodb.mongodb-vscode",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
+	},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/jshint:2": {}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
