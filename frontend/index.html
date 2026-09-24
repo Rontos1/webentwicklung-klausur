@@ -1,0 +1,53 @@
+<!---Enthält zum Teil mit KI generierten Code-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schiffeversenken gegen den Computer">
+    <title>Schiffeversenken</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="battleship.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Schiffeversenken</h1>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <!-- Spielfelder -->
+            <div class="boards-container">
+                <div class="board-wrapper">
+                    <h2>Mein Spielfeld</h2>
+                    <div id="player-board" class="board" aria-label="Mein Spielfeld"></div>
+                </div>
+
+                <div class="board-wrapper">
+                    <h2>Gegnerisches Spielfeld</h2>
+                    <div id="opponent-board" class="board" aria-label="Gegnerisches Spielfeld"></div>
+                </div>
+            </div>
+
+            <!-- Setup-Bereich -->
+            <div class="setup-container">
+                <h3>Schiffsplatzierung</h3>
+                <p>Aktuelles Schiff: <strong id="current-ship">Schlachtschiff</strong></p>
+                <label for="orientation">Ausrichtung:</label>
+                <select id="orientation" name="orientation">
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertikal</option>
+                </select>
+                <button id="start-button" type="button">Spiel starten</button>
+                <button id="reset-button" type="button">Zurücksetzen</button>
+            </div>
+
+            <!-- Statusanzeige -->
+            <div id="status" role="status" aria-live="polite"></div>
+        </div>
+    </main>
+</body>
+
+</html>

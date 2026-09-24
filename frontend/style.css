@@ -1,0 +1,113 @@
+/* style.css - Starter Template */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #1f2937;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.boards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.board-wrapper {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+    gap: 1px;
+    padding: 1px;
+    background-color: #374151;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 1px solid #9ca3af;
+    background-color: #bfdbfe;
+}
+
+#opponent-board .cell {
+    cursor: pointer;
+}
+
+#opponent-board .cell:disabled {
+    cursor: default;
+}
+
+.ship {
+    background-color: #6b7280;
+}
+
+.preview {
+    background-color: #86efac;
+}
+
+.miss {
+    background-color: #60a5fa;
+}
+
+.hit {
+    background-color: #ef4444;
+}
+
+.sunk {
+    background-color: #1f2937;
+}
+
+.setup-container {
+    margin: 30px auto 15px;
+    padding: 20px;
+    max-width: 700px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#status {
+    min-height: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .boards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 10px;
+    }
+
+    .board {
+        grid-template-columns: repeat(10, 28px);
+        grid-template-rows: repeat(10, 28px);
+    }
+
+    .cell {
+        width: 28px;
+        height: 28px;
+    }
+}
